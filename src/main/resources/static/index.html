@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Java Quiz Game</h1>
+            <p>Test your knowledge with multiple-choice questions!</p>
+        </header>
+        
+        <main>
+            <div id="welcome-screen" class="screen">
+                <h2>Welcome to the Quiz!</h2>
+                <p>Answer 10 randomly selected questions and see how you score.</p>
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            
+            <div id="quiz-screen" class="screen hidden">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <div class="question-info">
+                    <span id="question-number">Question 1 of 10</span>
+                    <span id="difficulty" class="difficulty-tag">Easy</span>
+                </div>
+                <div id="question-container">
+                    <h3 id="question-text">Question text will appear here</h3>
+                    <div id="options-container">
+                        <!-- Options will be dynamically added here -->
+                    </div>
+                </div>
+                <button id="next-btn" class="btn">Next Question</button>
+            </div>
+            
+            <div id="results-screen" class="screen hidden">
+                <h2>Quiz Completed!</h2>
+                <div class="results">
+                    <p>Your Score: <span id="final-score">0</span>/<span id="total-questions">0</span></p>
+                    <p>Percentage: <span id="percentage">0</span>%</p>
+                    <p id="performance-message"></p>
+                </div>
+                <button id="restart-btn" class="btn">Play Again</button>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
